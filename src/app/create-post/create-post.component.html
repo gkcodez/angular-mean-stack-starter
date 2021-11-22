@@ -1,0 +1,22 @@
+<!-- Property and EventBindings -->
+<!-- <textarea name="post-content" id="post-content" cols="50" rows="10">{{postContent}}</textarea>
+<textarea name="post-content" id="post-content" cols="50" rows="10" [value]="postContent" #postTextArea></textarea>
+<br>
+<button id="btnAddPost" (click)="onAddPost(postTextArea)">Add Post</button>
+<p>{{postContent}}</p> -->
+
+<!-- Two way binding -->
+<!-- <textarea name="post-content" id="post-content" cols="50" rows="10" [(ngModel)]="newPostContent"></textarea>
+<br>
+<button id="btnAddPost" (click)="onAddPost()">Add Post</button>
+<p>{{postContent}}</p> -->
+
+<!-- Material Elements -->
+<mat-card>
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>New Post</mat-label>
+    <textarea matInput name="post-content" placeholder="Enter post content here." [(ngModel)]="newPostContent"></textarea>
+</mat-form-field>
+<button mat-raised-button color="primary" id="btnAddPost" (click)="onAddPost()">Add Post</button>
+</mat-card>
+<p>{{postContent}}</p>
