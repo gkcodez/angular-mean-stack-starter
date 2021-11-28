@@ -1,0 +1,46 @@
+<!-- Property and EventBindings -->
+<!-- <textarea name="post-content" id="post-content" cols="50" rows="10">{{postContent}}</textarea>
+<textarea name="post-content" id="post-content" cols="50" rows="10" [value]="postContent" #postTextArea></textarea>
+<br>
+<button id="btnAddPost" (click)="onAddPost(postTextArea)">Add Post</button>
+<p>{{postContent}}</p> -->
+
+<!-- Two way binding -->
+<!-- <textarea name="post-content" id="post-content" cols="50" rows="10" [(ngModel)]="newPostContent"></textarea>
+<br>
+<button id="btnAddPost" (click)="onAddPost()">Add Post</button>
+<p>{{postContent}}</p> -->
+
+<!-- Material Elements -->
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<mat-card *ngIf="!isLoading">
+  <form (submit)="onSavePost(postForm)" #postForm="ngForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Post Title</mat-label>
+      <input
+        matInput
+        [ngModel]="post.title"
+        name="postTitle"
+        required
+        #title="ngModel"
+      />
+      <mat-error *ngIf="title.invalid">Please enter a valid title</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Post Content</mat-label>
+      <textarea
+        matInput
+        [ngModel]="post.content"
+        name="postContent"
+        required
+        #content="ngModel"
+      ></textarea>
+      <mat-error *ngIf="content.invalid">Please enter a valid content</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" id="btnAddPost" type="submit">
+      Save Post
+    </button>
+  </form>
+</mat-card>
