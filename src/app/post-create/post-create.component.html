@@ -14,7 +14,6 @@
 <!-- Material Elements -->
 
 <mat-spinner *ngIf="isLoading"></mat-spinner>
-
 <mat-card *ngIf="!isLoading">
   <form (submit)="onSavePost(postForm)" #postForm="ngForm">
     <mat-form-field class="example-full-width" appearance="fill">
