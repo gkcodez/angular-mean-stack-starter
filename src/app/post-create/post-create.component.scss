@@ -11,3 +11,7 @@ mat-form-field,
 text-area {
   width: 100%;
 }
+
+input[type="file"] {
+  visibility: hidden;
+}

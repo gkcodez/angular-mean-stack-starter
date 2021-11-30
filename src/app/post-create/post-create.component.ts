@@ -30,6 +30,7 @@ export class PostCreateComponent implements OnInit {
     this.isLoading = false;
     this.activatedRoute.paramMap.subscribe((x) => {
       let id = x.get('id');
+      console.log(id);
       if (id) {
         this.isEdit = true;
         this.postService.getPost(id).subscribe(x => {
