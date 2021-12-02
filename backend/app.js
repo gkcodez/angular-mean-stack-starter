@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const dbName = "posts-db";
 const postRoutes = require("./routes/posts");
 
+
 mongoose
   .connect(
     `mongodb+srv://gopalakrishnanpv:krishnaPV93@cluster-mean.vqr9b.mongodb.net/${dbName}?retryWrites=true&w=majority`
